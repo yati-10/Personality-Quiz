@@ -62,7 +62,7 @@ function updateResult() {
 
 function new1(){
   if (questionCount==3){
-    cookieScore = 0;
+    result.inerHTML = cookieScore = 0;
     appleScore = 0;
     questionCount=0;
     console.log("The cookieScore: "cookieScore+"The appleScore: "+appleScore+"The question count: "+questionCount);
