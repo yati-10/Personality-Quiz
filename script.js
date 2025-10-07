@@ -60,12 +60,76 @@ function updateResult() {
   }
 }
 
-function new1(){
-  if (questionCount==3){
+/*function new1(){
+  //if (questionCount==3){
     result.innerHTML = "Your result is..."
     cookieScore = 0;
     appleScore = 0;
     questionCount=0;
+
+  let allButtons = document.querySelectorAll("button");
+  allButtons.forEach(btn => {
+    if(btn.id != "restat"){
+      btn.diable = false;
+    }
+  });
+  
     console. log("The cookieScore = "+cookieScore+" The appleScore =  "+appleScore+" The question count = "+questionCount);
+  //}
+}*/
+
+function new1(){
+  // reset result text
+  result.innerHTML = "Your result is...";
+
+  // reset scores + counter
+  cookieScore = 0;
+  appleScore = 0;
+  questionCount = 0;
+
+  // re-enable all buttons
+  let allButtons = document.querySelectorAll("button");
+  allButtons.forEach(btn => {
+    if (btn.id !== "restart") {  // keep restart button enabled always
+      btn.disabled = false;
+    }
+  });
+
+  console.log("The cookieScore = " + cookieScore +
+              " The appleScore = " + appleScore +
+              " The question count = " + questionCount);
+}
+
+function disableQuestionButtons(questionClass) {
+  let buttons = document.querySelectorAll("." + questionClass);
+  buttons.forEach(btn => btn.disabled = true);
+}
+function cookie(event){
+  cookieScore++;
+  questionCount++;
+  console.log("questionCount = " + questionCount + " cookieScore = " + cookieScore);
+
+  if (event.target.classList.contains("q1")) disableQuestionButtons("q1");
+  if (event.target.classList.contains("q2")) disableQuestionButtons("q2");
+  if (event.target.classList.contains("q3")) disableQuestionButtons("q3");
+
+  if (questionCount == 3){
+    console.log("The quiz is done!");
+    updateResult();
+  }
+}
+
+function apple(event){
+  appleScore++;
+  questionCount++;
+  console.log("questionCount = " + questionCount + " appleScore = " + appleScore);
+
+  if (event.target.classList.contains("q1")) disableQuestionButtons("q1");
+  if (event.target.classList.contains("q2")) disableQuestionButtons("q2");
+  if (event.target.classList.contains("q3")) disableQuestionButtons("q3");
+
+  if (questionCount == 3){
+    console.log("The quiz is done!");
+    updateResult();
   }
 }
