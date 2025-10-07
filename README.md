@@ -20,6 +20,6 @@ It’s a beginner-friendly project built with HTML, CSS, and JavaScript that int
 The goal of this project is to make coding practice fun and interactive while learning to combine JavaScript logic with HTML and CSS for an overall user experience.
 
 
-<img width="1710" height="978" alt="Screenshot 2025-09-13 at 3 17 44 PM" src="https://github.com/user-attachments/assets/32f7593d-4831-4289-b52e-7924b8f69312" />
+<img width="1710" height="1107" alt="Screenshot 2025-10-07 at 7 24 41 PM" src="https://github.com/user-attachments/assets/a7cb9ee0-d1ea-4a05-8576-904efbe8f18d" />
 
 
